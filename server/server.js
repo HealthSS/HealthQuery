@@ -11,7 +11,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, //add path to static file here))
 })
 
-
 app.get('/coroni', (req, res) => {
   res.status(200).json('everybody run');
 });
@@ -19,6 +18,16 @@ app.get('/coroni', (req, res) => {
 app.post('/coroni', (req, res) => {
   res.status(200).json('updated coronis')
 });
+
+app.use((err, req, res, next) => {
+  const defaultErr = {
+    log: 'an express error occurred, this is a global error',
+    status: 400,
+    message: { err: 'an error has happened' }
+  }
+  const newErr = Object.assign(defaultErr, err)
+  res.status(newErr.status).json(newErr.message)
+})
 
 app.use('*', (req, res) => {
   res.sendStatus(404);
