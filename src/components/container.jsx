@@ -20,7 +20,16 @@ class Container extends Component {
   render() {
       return(
           <div>
-              <h1> component test </h1>
+              <div id="reportButton">
+                <input type="text" placeholder="Location"/>
+                <button type="submit"> Report </button>
+              </div>
+              <div id="updateButton">
+                <input type="text" placeholder="Location"/>
+                <button type="submit"> X.X </button>
+                <input type="text" placeholder="Location"/>
+                <button type="submit"> *_* </button>
+              </div>
           </div>
       )
   }

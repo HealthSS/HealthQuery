@@ -35,6 +35,11 @@ export default function App() {
 function Home() {
   return (
     <div>
+      <h1>MAP MAP </h1>
+      <h1>MAP MAP </h1>
+      <h1>MAP MAP </h1>
+      <h1>MAP MAP </h1>
+      <h1>MAP MAP </h1>
       <Container/>
     </div>
   );

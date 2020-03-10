@@ -35267,9 +35267,9 @@ var _loginPage = __webpack_require__(105);
 
 var _loginPage2 = _interopRequireDefault(_loginPage);
 
-var _containers = __webpack_require__(116);
+var _container = __webpack_require__(116);
 
-var _containers2 = _interopRequireDefault(_containers);
+var _container2 = _interopRequireDefault(_container);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35309,11 +35309,31 @@ function Home() {
     "div",
     null,
     _react2.default.createElement(
-      "h2",
+      "h1",
       null,
-      "Home1"
+      "MAP MAP "
     ),
-    _react2.default.createElement("containers", null)
+    _react2.default.createElement(
+      "h1",
+      null,
+      "MAP MAP "
+    ),
+    _react2.default.createElement(
+      "h1",
+      null,
+      "MAP MAP "
+    ),
+    _react2.default.createElement(
+      "h1",
+      null,
+      "MAP MAP "
+    ),
+    _react2.default.createElement(
+      "h1",
+      null,
+      "MAP MAP "
+    ),
+    _react2.default.createElement(_container2.default, null)
   );
 }
 
@@ -42710,34 +42730,35 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
     };
 };
 
-var container = function (_Component) {
-    _inherits(container, _Component);
+var Container = function (_Component) {
+    _inherits(Container, _Component);
 
-    function container(props) {
-        _classCallCheck(this, container);
+    function Container(props) {
+        _classCallCheck(this, Container);
 
-        return _possibleConstructorReturn(this, (container.__proto__ || Object.getPrototypeOf(container)).call(this, props));
+        return _possibleConstructorReturn(this, (Container.__proto__ || Object.getPrototypeOf(Container)).call(this, props));
     }
 
-    _createClass(container, [{
+    _createClass(Container, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 'div',
                 null,
+                _react2.default.createElement('input', { type: 'text', placeholder: 'Location' }),
                 _react2.default.createElement(
-                    'h1',
-                    null,
-                    ' component test '
+                    'button',
+                    { type: 'submit' },
+                    ' Report '
                 )
             );
         }
     }]);
 
-    return container;
+    return Container;
 }(_react.Component);
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(container);
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Container);
 
 /***/ })
 /******/ ]);
