@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest --verbose & nodemon server/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,8 @@
     "pg": "^7.18.2"
   },
   "devDependencies": {
-    "jest": "^25.1.0"
+    "jest": "^25.1.0",
+    "node-fetch": "^2.6.0",
+    "supertest": "^4.0.2"
   }
 }
