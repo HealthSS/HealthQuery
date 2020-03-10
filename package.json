@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose & nodemon server/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,10 @@
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^7.18.2"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "node-fetch": "^2.6.0",
+    "supertest": "^4.0.2"
   }
 }
