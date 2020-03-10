@@ -13,3 +13,6 @@ describe("Test the root path", () => {
       });
   });
 });
+describe("Test that it handles bad requests", () => {
+  test("It should respond with 404", done => {});
+});
