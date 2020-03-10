@@ -9,8 +9,7 @@ import App from './components/App.jsx';
 let store = createStore(reducers);
 ReactDOM.render(
  <Provider store={store}>
-     <h1>testing</h1>
-      {/* <App /> */}
+      <App />
    </Provider>,
   document.getElementById('app')
 );

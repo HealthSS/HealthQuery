@@ -10,7 +10,7 @@ module.exports = {
     },
     context: path.resolve(__dirname, 'src'),
     devServer: {
-        contentBase: path.resolve(__dirname, 'public/assets'),
+        contentBase: path.resolve(__dirname, 'public'),
         stats: 'errors-only',
         open: true,
         port: 8080,
