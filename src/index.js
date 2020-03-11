@@ -1,12 +1,16 @@
-import _ from 'lodash';
+import './styles/main.css';
+import React from "react";
+import ReactDOM from "react-dom";
+// import { Provider } from 'react-redux';
+// import { createStore } from 'redux';
+// import { reducers } from './reducers/index';
+// import App from './components/App.jsx';
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+// let store = createStore(reducers);
+ReactDOM.render(
+//  <Provider store={store}>
+     <h1> test test </h1>
+      {/* <App /> */}
+   {/* </Provider>, */}
+  document.getElementById('app')
+);
