@@ -42,12 +42,12 @@ describe("It should handle GET requests to coroni", () => {
       });
   });
 });
-describe("It should handle POST requests to /reportCoroni", ()=>{
-  test("It should create new districts and confirmed cases", (done)=>{
-    request(app)
-    .post("/")
-  })
-});
+// describe("It should handle POST requests to /reportCoroni", ()=>{
+//   test("It should create new districts and confirmed cases", (done)=>{
+//     request(app)
+//     .post("/")
+//   })
+// });
 
 // for (let el of res.body) {
 //   expect(el).toHaveProperty("confirmed");
