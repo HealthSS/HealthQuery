@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const port = 3000;
 const coroniController = require("./coroniController");
+const loginController = require("./loginController");
 
 app.use(express.json());
 // app.use(express.urlencoded());
@@ -10,12 +11,18 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.sendStatus(200);
 });
-
+app.post("/login", loginController.checkLogin, (req, res) => {
+  const { isMatch } = res.locals;
+  res.status(200).json({ isMatch });
+});
 app.get("/coroni", coroniController.getData, (req, res) => {
   res.status(200).json(res.locals.getData);
 });
 
-app.post("/coroni", coroniController.updateData, (req, res) => {
+app.post("/updateCoroni", coroniController.reportData, (req, res) => {
+  res.status(200).json("updated corona database");
+});
+app.post("/reportCoroni", coroniController.updateData, (req, res) => {
   res.status(200).json("updated coronis database");
 });
 

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose & nodemon server/server.js"
+    "test": "jest --verbose & nodemon server/server.js",
+    "backend": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,12 @@
   },
   "homepage": "https://github.com/HealthSS/HealthQuery#readme",
   "dependencies": {
+    "bcrypt": "^4.0.1",
     "express": "^4.17.1",
     "pg": "^7.18.2"
   },
   "devDependencies": {
+    "bcrpyt": "^2.0.0",
     "jest": "^25.1.0",
     "node-fetch": "^2.6.0",
     "supertest": "^4.0.2"
