@@ -43,8 +43,9 @@ describe("It should handle GET requests to coroni", () => {
   });
 });
 describe("It should handle POST requests to /reportCoroni", ()=>{
-  test("It should increment active cases and confirmed cases", (done)=>{
-
+  test("It should create new districts and confirmed cases", (done)=>{
+    request(app)
+    .post("/")
   })
 });
 
