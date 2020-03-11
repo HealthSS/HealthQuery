@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development'
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -10,9 +10,12 @@ module.exports = {
   module: {
     rules: [
         { 
-            test: /\.jsx?$/, 
+            test: /\.(js|jsx)$/, 
             loader: 'babel-loader', 
-            exclude: /node_modules/ 
+            exclude: /node_modules/,
+            options: {
+                presets: ['@babel/preset-env', '@babel/preset-react']
+            } 
         },
         {
             test: /\.css$/,
