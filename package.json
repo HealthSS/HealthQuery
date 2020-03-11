@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
+    "backend": "nodemon server/server.js",
     "build": "webpack",
     "start": "webpack-dev-server",
     "test": "jest --verbose & nodemon server/server.js"
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/HealthSS/HealthQuery#readme",
   "dependencies": {
+    "bcrypt": "^4.0.1",
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
@@ -35,6 +37,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "devDependencies": {
+    "bcrpyt": "^2.0.0",
     "jest": "^25.1.0",
     "node-fetch": "^2.6.0",
     "supertest": "^4.0.2",
