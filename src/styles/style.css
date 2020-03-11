@@ -1,3 +1,90 @@
 body {
-    background: red;
+    background: whitesmoke;
+}
+
+#title{
+    text-align: center;
+}
+ 
+#loginDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+} 
+
+#logInput {
+  width: 70%;
+  height: 30px;
+  margin : 5px;
+}
+
+#loginSection{
+  /* border-style: solid; */
+  background: white;
+  height: 350px;
+  width: 300px;
+  margin: auto;
+  box-shadow: 10px 5px 5px grey;
+  } 
+
+#logButton {
+    width: 70%;
+    height: 30px;
+    margin : 10px;
+    background:gainsboro;
+}
+#signButton {
+    width: 70%;
+    height: 30px;
+    margin : 10px;
+    background:gainsboro;
+}
+
+#oAuthButton {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#gButton{
+    width: 40%;
+    height: 30px;
+    margin: 10px;
+    background: rgb(221, 75, 57);
+    color: white;
+}
+
+#fbButton{
+    width: 40%;
+    height: 30px;
+    margin: 10px;
+    background:rgb(66,103,178);
+    color: white;
+}
+
+#mapSection {
+  display: flex;
+  flex-direction: row;
+}
+
+#mapDiv {
+      background: red;
+      width: 65%;
+      margin: 35px;
+  }
+#mapBox {
+    width: 25%;
+    background: green;
+    margin: 35px;
+}
+
+#AdminDiv {
+    background:orange;
+    width: 85%;
+    margin: 35px;
+}
+
+#reportSection {
+    margin: 35px;
 }

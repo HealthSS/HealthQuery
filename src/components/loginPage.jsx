@@ -7,11 +7,16 @@ export default function Login(props) {
 
     return (
         <div id='loginDiv'>
-            <input type="text" placeholder="username"/>
-            <input type="text" placeholder="password"/>
-            <button type="submit"> Log In </button>
-            <button type="submit"> Sign Up </button>
-            <button> Google Login In </button>
+            <h2>Log In</h2>
+            <input id="logInput" type="text" placeholder="username" required/>
+            <input id="logInput" type="text" placeholder="password" required/>
+            <button id="logButton" type="submit"> Log In </button>
+            <button id="signButton" type="submit"> Sign Up </button>
+        <div id="oAuthButton">
+            <hr/>
+            <button id="gButton"> Google+ </button>
+            <button id="fbButton"> Facebook </button>
+        </div>
         </div>
     )
 }

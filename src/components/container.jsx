@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'
-// import TheComponent from '../components/App.jsx';
 import React, { Component } from 'react'
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -20,11 +19,11 @@ class Container extends Component {
   render() {
       return(
           <div>
-              <div id="reportButton">
+              <div id="reportSection">
                 <input type="text" placeholder="Location"/>
                 <button type="submit"> Report </button>
-              </div>
-              <div id="updateButton">
+              {/* </div>
+              <div id="updateButton"> */}
                 <input type="text" placeholder="Location"/>
                 <button type="submit"> X.X </button>
                 <input type="text" placeholder="Location"/>

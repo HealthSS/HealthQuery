@@ -6,8 +6,10 @@ import {
   Link
 } from "react-router-dom";
 import Login from './loginPage.jsx'
-import Container from './container.jsx'
 import AdminPage from './AdminPage.jsx'
+import Map from './Map.jsx'
+import Container from './container.jsx'
+
 
 
 export default function App() {
@@ -60,13 +62,11 @@ export default function App() {
 }
 function Home() {
   return (
-    <div>
+    <div id="login">
+      <div id='loginSection'>
         <Login/>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
+      </div>
+         <Map/>
     </div>
   );
 }
@@ -75,11 +75,7 @@ function LoggedIn() {
   return (
     <div>
       <h2>LoggedIn</h2>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
+      <Map/>
       <Container/>
     </div>
   );
@@ -90,11 +86,7 @@ function AdminLogIn() {
   return (
     <div>
       <h2>Admin Only</h2>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
-      <h1>MAP MAP </h1>
+      <Map/>
       <AdminPage/>
     </div>
   );
