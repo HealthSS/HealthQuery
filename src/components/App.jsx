@@ -9,55 +9,24 @@ import Login from './loginPage.jsx'
 import AdminPage from './AdminPage.jsx'
 import Map from './Map.jsx'
 import Container from './container.jsx'
-
+import { useDispatch, useSelector } from "react-redux";
 
 
 export default function App() {
+
+  // const loggedState = useSelector(state => state.isLoggedIn)
+  
+  const loggedState = "null";
+
   return (
-    // <Router>
-    //   <div>
-    //     <Login/>
-    //     <hr />
-    //     <Switch>
-    //       <Route path="/">
-    //         <Home />
-    //       </Route>
-    //       <Route path="/LoggedIn">
-    //         <LoggedIn />
-    //       </Route>
-    //       <Route path="/AdminLogIn">
-    //         <AdminLogIn />
-    //       </Route>
-    //     </Switch>
-    //   </div>
-    // </Router>
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Main</Link>
-          </li>
-          <li>
-            <Link to="/LoggedIn">Logged In</Link>
-          </li>
-          <li>
-            <Link to="/AdminLogIn">Admin Logged In</Link>
-          </li>
-        </ul>
-        <hr />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/LoggedIn">
-            <LoggedIn />
-          </Route>
-          <Route path="/AdminLogIn">
-            <AdminLogIn />
-          </Route>
-        </Switch>
-      </div>
+        <Route exact path="/" component={()=>{
+          if (loggedState === "Admin") {return <AdminLogIn/>}
+          else if (loggedState === 'user') { return <LoggedIn/>}
+          else {return <Home/>}
+          }} />
     </Router>
+
   );
 }
 function Home() {
