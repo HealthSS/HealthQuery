@@ -5,6 +5,18 @@ export default function Login(props) {
     const [username, updateUsername] = useState('');
     const [password, updatePassword] = useState('');
 
+    function reRoute() {
+        fetch('/auth/google', {
+            method: 'GET'
+        })
+        .then(response => {
+            console.log(response)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
+
     return (
         <div id='loginDiv'>
             <h2>Log In</h2>
@@ -14,7 +26,8 @@ export default function Login(props) {
             <button id="signButton" type="submit"> Sign Up </button>
         <div id="oAuthButton">
             <hr/>
-            <button id="gButton"> Google+ </button>
+            {/* <button id="gButton" onClick={reRoute}> Google+ </button> */}
+            <a id="gButton" href="localhost:3000/auth/google">Google+</a>
             <button id="fbButton"> Facebook </button>
         </div>
         </div>

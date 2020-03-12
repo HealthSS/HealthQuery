@@ -1,8 +1,17 @@
 body {
-    background: whitesmoke;
+    background: url(redCoroni.jpg)
+    no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
 #title{
+    letter-spacing: 1px;
     text-align: center;
 }
  
@@ -20,12 +29,13 @@ body {
 }
 
 #loginSection{
+  color: red;
   /* border-style: solid; */
   background: white;
   height: 350px;
   width: 300px;
   margin: auto;
-  box-shadow: 10px 5px 5px grey;
+  box-shadow: 5px 5px 10px 2px grey;
   } 
 
 #logButton {
@@ -53,6 +63,8 @@ body {
     margin: 10px;
     background: rgb(221, 75, 57);
     color: white;
+    text-align: center;
+
 }
 
 #fbButton{
@@ -69,13 +81,13 @@ body {
 }
 
 #mapDiv {
-      background: red;
-      width: 65%;
-      margin: 35px;
+      background: white;
+      width: 50%;
+      margin: 50px;
   }
 #mapBox {
     width: 25%;
-    background: green;
+    background: hotpink;
     margin: 35px;
 }
 
@@ -87,4 +99,10 @@ body {
 
 #reportSection {
     margin: 35px;
+}
+
+#heatMap {
+  margin-left: 10vw;
+  height: 25vw;
+  width: 40vw;
 }
