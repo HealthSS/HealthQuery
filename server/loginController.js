@@ -1,23 +1,25 @@
-const db = require("./database.js");
-const loginController = {};
-const bcrypt = require("bcrypt");
+const db = require('./database.js');
 
-loginController.checkLogin = function(req, res, next) {
-  //query database for hashed password
+const loginController = {};
+const bcrypt = require('bcrypt');
+
+loginController.checkLogin = function (req, res, next) {
+  // query database for hashed password
   const queryString = "SELECT password FROM admin WHERE username = 'admin'";
   db.query(queryString, (err, data) => {
     if (err) {
       return next({
-        log: "an error has occurred in checkLogin middleware",
+        log: 'an error has occurred in checkLogin middleware',
         status: 404,
-        error: { err }
+        error: { err },
       });
     }
-    //pull password out of admin row
+    // pull password out of admin row
     const { password } = data.rows[0];
-    //check that password matches hashed password and that username is admin
-    res.locals.isMatch =
-      bcrypt.compareSync(req.body.password, password) &&
-      req.body.username === "admin";
+    // check that password matches hashed password and that username is admin
+    res.locals.isMatch = bcrypt.compareSync(req.body.password, password)
+      && req.body.username === 'admin';
   });
 };
+
+module.exports = loginController;

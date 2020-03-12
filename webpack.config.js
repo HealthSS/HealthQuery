@@ -9,21 +9,24 @@ module.exports = {
   },
   module: {
     rules: [
-        { 
-            test: /\.(js|jsx)$/, 
-            loader: 'babel-loader', 
-            exclude: /node_modules/,
-            options: {
-                presets: ['@babel/preset-env', '@babel/preset-react']
-            } 
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react'],
         },
-        {
-            test: /\.css$/,
-            use: [ 'style-loader', 'css-loader' ]
-        }
-    ]
-},
-devServer: {
-    contentBase: path.resolve(__dirname, "dist")
-           }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    proxy: {
+      '/auth/google': 'http://localhost:3000',
+    },
+  },
 };

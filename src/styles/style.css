@@ -1,5 +1,8 @@
 body {
-    background: whitesmoke;
+    background: black;
+    color: red;
+    font-family: 'Source Sans Pro', sans-serif;
+    
 }
 
 #title{
@@ -53,6 +56,8 @@ body {
     margin: 10px;
     background: rgb(221, 75, 57);
     color: white;
+    text-align: center;
+
 }
 
 #fbButton{
