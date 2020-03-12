@@ -9,7 +9,7 @@ export default function Map(props) {
               <img id='heatMap' src={heatMap} alt="heatmap"/>
 
             <div id="mapBox">
-              <h1>text box</h1>
+              <h1>display pending cases </h1>
             </div>
           </div>
         </div>

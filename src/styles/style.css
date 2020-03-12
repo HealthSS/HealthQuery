@@ -10,12 +10,17 @@ body {
     
 }
 
-#title{
+#title {
+    font-family: 'Barlow', sans-serif;
     letter-spacing: 1px;
     text-align: center;
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+    font-size: 45px;
+    font-weight: 700;
 }
  
-#loginDiv{
+#loginDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +33,7 @@ body {
   margin : 5px;
 }
 
-#loginSection{
+#loginSection {
   color: red;
   /* border-style: solid; */
   background: white;
@@ -57,7 +62,7 @@ body {
   flex-direction: row;
   align-items: center;
 }
-#gButton{
+#gButton {
     width: 40%;
     height: 30px;
     margin: 10px;
@@ -67,7 +72,7 @@ body {
 
 }
 
-#fbButton{
+#fbButton {
     width: 40%;
     height: 30px;
     margin: 10px;
@@ -86,15 +91,17 @@ body {
       margin: 50px;
   }
 #mapBox {
-    width: 25%;
-    background: hotpink;
-    margin: 35px;
+    width: 30%;
+    background: black;
+    margin: 50px;
+    text-align: center;
 }
 
 #AdminDiv {
-    background:orange;
+    /* background:white; */
     width: 85%;
     margin: 35px;
+    text-align: center;
 }
 
 #reportSection {
@@ -102,7 +109,12 @@ body {
 }
 
 #heatMap {
+  margin-top: 3vw;
   margin-left: 10vw;
-  height: 25vw;
+  height: 30vw;
   width: 40vw;
+}
+
+#container {
+  text-align: center;
 }
