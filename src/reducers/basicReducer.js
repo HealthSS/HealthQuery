@@ -1,13 +1,13 @@
 const initialState = {
-    isLoggedIn: "none",
+    isLoggedIn: null,
     username_txt: "",
     password_txt: "",
     report_txt: "",
     bye_txt: "",
     heal_txt: "",
-    pending_cases = []
+    pending_cases: []
 }
-const basicReducer = (state, action) => {
+const basicReducer = (state = initialState, action) => {
     switch(action.type) {
      case 'USER_UPDATE': 
         return Object.assign({}, state, {username_txt: action.payload})
@@ -34,10 +34,10 @@ const basicReducer = (state, action) => {
         return Object.assign({},state, { pending_cases : newCases })
         break;
      case 'REMOVE_CASE': 
-        const newCases = JSON.parse(JSON.stringify(state.pending_cases));
+        const removeCases = JSON.parse(JSON.stringify(state.pending_cases));
         const { id } = action.payload;
-        newCases.splice(id, 1);
-        return Object.assign({},state, { pending_cases : newCases });
+        removeCases.splice(id, 1);
+        return Object.assign({},state, { pending_cases : removeCases });
         break;
      case 'UPDATE_LOGIN': 
         return Object.assign({},state, { isLoggedIn : action.payload});
