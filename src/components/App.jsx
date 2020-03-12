@@ -10,6 +10,7 @@ import AdminPage from './AdminPage.jsx'
 import Map from './Map.jsx'
 import Container from './container.jsx'
 import { useDispatch, useSelector } from "react-redux";
+import PieChartContainer from './PieChartContainer.jsx';
 
 
 
@@ -37,6 +38,7 @@ function Home() {
         <Login/>
       </div>
          <Map/>
+         <PieChartContainer/>
     </div>
   );
 }
