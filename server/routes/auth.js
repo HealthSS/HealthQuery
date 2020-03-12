@@ -15,7 +15,6 @@ router.get('/logout', (req, res) => {
 
 // auth with google
 router.get('/google', (req, res, next) => {
-  console.log('hoidyGOOGLESTUFF');
   return next();
 },
 passport.authenticate('google', {

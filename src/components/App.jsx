@@ -17,7 +17,7 @@ export default function App() {
 
   // const loggedState = useSelector(state => state.isLoggedIn)
   
-  const loggedState = "admin";
+  const loggedState = "user";
 
   return (
     <Router>
@@ -36,7 +36,7 @@ function Home() {
       <div id='loginSection'>
         <Login/>
       </div>
-         <Map/>
+         {/* <Map/> */}
     </div>
   );
 }
@@ -44,7 +44,6 @@ function Home() {
 function LoggedIn() {
   return (
     <div>
-      <h2>LoggedIn</h2>
       <Map/>
       <Container/>
     </div>
@@ -55,7 +54,6 @@ function LoggedIn() {
 function AdminLogIn() {
   return (
     <div>
-      <h2>Admin Only</h2>
       <Map/>
       <AdminPage/>
     </div>
