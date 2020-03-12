@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server/server.js",
     "test": "jest --verbose & nodemon server/server.js"
   },
   "repository": {
@@ -17,7 +18,14 @@
   },
   "homepage": "https://github.com/HealthSS/HealthQuery#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "google-auth-library": "^5.10.1",
+    "googleapis": "^47.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
     "pg": "^7.18.2"
   },
   "devDependencies": {
