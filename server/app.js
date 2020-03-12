@@ -20,6 +20,8 @@ app.set('view engine', 'ejs');
 
 // google oAuth routes
 app.use('/auth', authRoutes);
+const coroniController = require("./coroniController");
+const loginController = require("./loginController");
 
 app.use(express.json());
 // app.use(express.urlencoded());
@@ -46,6 +48,19 @@ app.get('/coroni', coroniController.getData, (req, res) => {
 
 app.post('/coroni', coroniController.updateData, (req, res) => {
   res.status(200).json('updated coronis database');
+app.post("/login", loginController.checkLogin, (req, res) => {
+  const { isMatch } = res.locals;
+  res.status(200).json({ isMatch });
+});
+app.get("/coroni", coroniController.getData, (req, res) => {
+  res.status(200).json(res.locals.getData);
+});
+
+app.post("/updateCoroni", coroniController.reportData, (req, res) => {
+  res.status(200).json("updated corona database");
+});
+app.post("/reportCoroni", coroniController.updateData, (req, res) => {
+  res.status(200).json("updated coronis database");
 });
 
 app.use((err, req, res, next) => {
