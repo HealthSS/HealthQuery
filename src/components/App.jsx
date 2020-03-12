@@ -12,11 +12,12 @@ import Container from './container.jsx'
 import { useDispatch, useSelector } from "react-redux";
 
 
+
 export default function App() {
 
   // const loggedState = useSelector(state => state.isLoggedIn)
   
-  const loggedState = "null";
+  const loggedState = "admin";
 
   return (
     <Router>
