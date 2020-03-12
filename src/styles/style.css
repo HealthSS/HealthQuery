@@ -1,12 +1,26 @@
 body {
-    background: whitesmoke;
+    background: url(redCoroni.jpg)
+    no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
-#title{
+#title {
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 1px;
     text-align: center;
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+    font-size: 45px;
+    font-weight: 700;
 }
  
-#loginDiv{
+#loginDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,13 +39,14 @@ body {
   margin : 5px;
 }
 
-#loginSection{
+#loginSection {
+  color: red;
   /* border-style: solid; */
   background: white;
   height: 350px;
   width: 300px;
   margin: auto;
-  box-shadow: 10px 5px 5px grey;
+  box-shadow: 5px 5px 10px 2px grey;
   } 
 
 #logButton {
@@ -53,15 +68,16 @@ body {
   flex-direction: row;
   align-items: center;
 }
-#gButton{
+#gButton {
     width: 40%;
     height: 30px;
     margin: 10px;
     background: rgb(221, 75, 57);
     color: white;
+    text-align: center;
 }
 
-#fbButton{
+#fbButton {
     width: 40%;
     height: 30px;
     margin: 10px;
@@ -75,22 +91,35 @@ body {
 }
 
 #mapDiv {
-      background: red;
-      width: 65%;
-      margin: 35px;
+      background: white;
+      width: 50%;
+      margin: 50px;
   }
 #mapBox {
-    width: 25%;
-    background: green;
-    margin: 35px;
+    width: 30%;
+    background: black;
+    margin: 50px;
+    text-align: center;
 }
 
 #AdminDiv {
-    background:orange;
+    /* background:white; */
     width: 85%;
     margin: 35px;
+    text-align: center;
 }
 
 #reportSection {
     margin: 35px;
+}
+
+#heatMap {
+  margin-top: 3vw;
+  margin-left: 10vw;
+  height: 30vw;
+  width: 40vw;
+}
+
+#container {
+  text-align: center;
 }

@@ -1,6 +1,7 @@
-const db = require("./database.js");
+const db = require('./database.js');
+
 const loginController = {};
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcrypt');
 
 loginController.checkLogin = function(req, res, next) {
   //query database for hashed password
@@ -9,9 +10,9 @@ loginController.checkLogin = function(req, res, next) {
   db.query(queryString, (err, data) => {
     if (err) {
       return next({
-        log: "an error has occurred in checkLogin middleware",
+        log: 'an error has occurred in checkLogin middleware',
         status: 404,
-        error: { err }
+        error: { err },
       });
     } else {
     //pull password out of admin row

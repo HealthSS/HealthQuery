@@ -1,16 +1,11 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Login from './loginPage.jsx'
-import AdminPage from './AdminPage.jsx'
-import Map from './Map.jsx'
-import Container from './container.jsx'
-import { useDispatch, useSelector } from "react-redux";
-
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Login from './loginPage.jsx';
+import AdminPage from './AdminPage.jsx';
+import Map from './Map.jsx';
+import Container from './container.jsx';
+import { useDispatch, useSelector } from 'react-redux';
+// import PieChartContainer from './PieChartContainer.jsx';
 
 export default function App() {
 
@@ -26,16 +21,16 @@ export default function App() {
           else {return <Home/>}
           }} />
     </Router>
-
   );
 }
 function Home() {
   return (
     <div id="login">
-      <div id='loginSection'>
-        <Login/>
+      <div id="loginSection">
+        <Login />
       </div>
-         <Map/>
+      {/* <Map/> */}
+      {/* <PieChartContainer /> */}
     </div>
   );
 }
@@ -43,20 +38,19 @@ function Home() {
 function LoggedIn() {
   return (
     <div>
-      <h2>LoggedIn</h2>
-      <Map/>
-      <Container/>
+      <Map />
+      <Container />
+      {/* <PieChartContainer /> */}
     </div>
   );
 }
 
-
 function AdminLogIn() {
   return (
     <div>
-      <h2>Admin Only</h2>
-      <Map/>
-      <AdminPage/>
+      <Map />
+      <AdminPage />
+      {/* <PieChartContainer /> */}
     </div>
   );
 }

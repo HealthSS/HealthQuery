@@ -18,7 +18,7 @@ class Container extends Component {
   }
   render() {
       return(
-          <div>
+          <div id='container'>
               <div id="reportSection">
                 <input type="text" onChange={(e) => dispatch(reportUpdate(e.target.value))} placeholder="Location"/>
                 <button type="submit"> Report </button>
