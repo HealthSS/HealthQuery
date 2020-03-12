@@ -15,6 +15,14 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
+          plugins: [
+            [
+              '@babel/plugin-transform-runtime',
+              {
+                regenerator: true
+              }
+            ]
+          ]
         },
       },
       {
@@ -40,6 +48,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     proxy: {
       '/auth/google': 'http://localhost:3000',
+      '/coroni': 'http://localhost:3000',
     },
   },
 };
