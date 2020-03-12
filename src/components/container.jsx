@@ -20,13 +20,13 @@ class Container extends Component {
       return(
           <div>
               <div id="reportSection">
-                <input type="text" placeholder="Location"/>
+                <input type="text" onChange={(e) => dispatch(reportUpdate(e.target.value))} placeholder="Location"/>
                 <button type="submit"> Report </button>
               {/* </div>
               <div id="updateButton"> */}
-                <input type="text" placeholder="Location"/>
+                <input type="text" onChange={(e) => dispatch(byeUpdate(e.target.value))} placeholder="Location"/>
                 <button type="submit"> X.X </button>
-                <input type="text" placeholder="Location"/>
+                <input type="text" onChange={(e) => dispatch(healUpdate(e.target.value))} placeholder="Location"/>
                 <button type="submit"> *_* </button>
               </div>
           </div>

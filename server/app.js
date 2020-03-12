@@ -4,6 +4,9 @@ const app = express();
 const port = 3000;
 const coroniController = require("./coroniController");
 const loginController = require("./loginController");
+const cors = require("cors")
+
+app.use(cors())
 
 app.use(express.json());
 // app.use(express.urlencoded());
@@ -11,9 +14,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.sendStatus(200);
 });
+
 app.post("/login", loginController.checkLogin, (req, res) => {
-  const { isMatch } = res.locals;
-  res.status(200).json({ isMatch });
+  res.status(200).json(res.locals.loginState);
 });
 app.get("/coroni", coroniController.getData, (req, res) => {
   res.status(200).json(res.locals.getData);

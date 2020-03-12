@@ -14,15 +14,15 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function App() {
 
-  // const loggedState = useSelector(state => state.isLoggedIn)
+  const loggedState = useSelector(state => state.text.isLoggedIn);
   
-  const loggedState = "null";
+  // const loggedState = null;
 
   return (
     <Router>
         <Route exact path="/" component={()=>{
           if (loggedState === "Admin") {return <AdminLogIn/>}
-          else if (loggedState === 'user') { return <LoggedIn/>}
+          else if (loggedState === 'User') { return <LoggedIn/>}
           else {return <Home/>}
           }} />
     </Router>

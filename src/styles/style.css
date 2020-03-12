@@ -13,7 +13,13 @@ body {
   padding: 15px;
 } 
 
-#logInput {
+#userInput {
+  width: 70%;
+  height: 30px;
+  margin : 5px;
+}
+
+#passInput {
   width: 70%;
   height: 30px;
   margin : 5px;
