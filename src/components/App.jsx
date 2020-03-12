@@ -5,7 +5,7 @@ import AdminPage from './AdminPage.jsx';
 import Map from './Map.jsx';
 import Container from './container.jsx';
 import { useDispatch, useSelector } from 'react-redux';
-// import PieChartContainer from './PieChartContainer.jsx';
+import PieChartContainer from './PieChartContainer.jsx';
 
 export default function App() {
 
@@ -30,7 +30,7 @@ function Home() {
         <Login />
       </div>
       {/* <Map/> */}
-      {/* <PieChartContainer /> */}
+      <PieChartContainer />
     </div>
   );
 }
@@ -40,7 +40,7 @@ function LoggedIn() {
     <div>
       <Map />
       <Container />
-      {/* <PieChartContainer /> */}
+      <PieChartContainer />
     </div>
   );
 }
@@ -50,7 +50,7 @@ function AdminLogIn() {
     <div>
       <Map />
       <AdminPage />
-      {/* <PieChartContainer /> */}
+      <PieChartContainer />
     </div>
   );
 }
