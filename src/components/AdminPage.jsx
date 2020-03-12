@@ -8,11 +8,7 @@ export default function AdminPage(props) {
     return (
         <div id='AdminDiv'>
             <p>
-                DATA DATA 
-                DATA DATA 
-                DATA DATA 
-                DATA DATA 
-                DATA DATA 
+                Pending cases to be reviewed and verified or rejected by accounts with Admin privileges will be listed here
             </p>
         </div>
     )
