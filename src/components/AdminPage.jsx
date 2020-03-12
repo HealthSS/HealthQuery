@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import { Redirect } from 'react-router'
 
 export default function AdminPage(props) {
-    const [username, updateUsername] = useState('');
-    const [password, updatePassword] = useState('');
+
 
     return (
         <div id='AdminDiv'>
-            <p>
-                Pending cases to be reviewed and verified or rejected by accounts with Admin privileges will be listed here
-            </p>
-        </div>
+            <input type="text" onChange={(e) => dispatch(addCase(e.target.value))} placeholder="Location"/>
+                <button type="submit"> Approve </button>
+                <input type="text" onChange={(e) => dispatch(removeCase(e.target.value))} placeholder="Location"/>
+                <button type="submit"> Reject </button>
+         </div>
     )
 }

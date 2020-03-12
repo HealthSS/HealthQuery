@@ -1,8 +1,8 @@
 const coroniController = {};
 const db = require("./database.js");
-
-// middleware functionality to query database here
-// bcrypt.hash("admin", 15, function(err, hash) {
+// const bcrypt = require("bcrypt");
+// // middleware functionality to query database here
+// bcrypt.hash("user", 15, function(err, hash) {
 //   // Store hash in database
 //   if (err) {
 //     console.log("err");
@@ -10,7 +10,7 @@ const db = require("./database.js");
 //   } else {
 //     console.log("Address stored");
 //     const queryString = "INSERT INTO admin(password, username) VALUES($1, $2)";
-//     const queryArr = [hash, "admin"];
+//     const queryArr = [hash, "user"];
 //     db.query(queryString, queryArr, (err, response) => {
 //       if (err) {
 //         console.log("Err occurred");

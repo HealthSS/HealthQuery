@@ -3,39 +3,11 @@ const path = require('path');
 
 const app = express();
 const port = 3000;
-const cookieParser = require('cookie-parser');
-const cors = require('cors');
-const coroniController = require('./coroniController');
-const authRoutes = require('./routes/auth');
-// const { google } = require('googleapis');
-// const jwt = require('jsonwebtoken');
-// // Google's OAuth2 client
-// const { OAuth2 } = google.auth;
-// const CONFIG = require('../config');
-const loginController = require('./loginController');
+const coroniController = require("./coroniController");
+const loginController = require("./loginController");
+const cors = require("cors")
 
-const passportSetup = require('../config/passportSetup');
-
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  next();
-});
-
-app.use(cors({
-  credentials: true,
-}));
-app.use(cookieParser());
-// Setting up EJS Views
-app.set('view engine', 'ejs');
-// app.set('views', __dirname);
-app.get('/', (req, res) => res.sendFile(path.resolve(__dirname, '../dist/index.html')));
-app.get('/main.js', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../dist/main.js'));
-});
-
-// google oAuth routes
-app.use('/auth', authRoutes);
-// const coroniController = require("./coroniController");
+app.use(cors())
 
 app.use(express.json());
 // app.use(express.urlencoded());
@@ -63,9 +35,9 @@ app.get('/coroni', coroniController.getData, (req, res) => {
 app.post('/coroni', coroniController.updateData, (req, res) => {
   res.status(200).json('updated coronis database');
 });
-app.post('/login', loginController.checkLogin, (req, res) => {
-  const { isMatch } = res.locals;
-  res.status(200).json({ isMatch });
+
+app.post("/login", loginController.checkLogin, (req, res) => {
+  res.status(200).json(res.locals.loginState);
 });
 app.get('/coroni', coroniController.getData, (req, res) => {
   res.status(200).json(res.locals.getData);
