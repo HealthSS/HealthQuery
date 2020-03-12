@@ -16,7 +16,7 @@ export default function App() {
 
   // const loggedState = useSelector(state => state.isLoggedIn)
   
-  const loggedState = "user";
+  const loggedState = "null";
 
   return (
     <Router>
