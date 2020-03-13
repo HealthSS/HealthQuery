@@ -8,18 +8,25 @@ import { useDispatch, useSelector } from 'react-redux';
 import PieChartContainer from './PieChartContainer.jsx';
 
 export default function App() {
-
   const loggedState = useSelector(state => state.text.isLoggedIn);
-  
+
   // const loggedState = null;
 
   return (
     <Router>
-        <Route exact path="/" component={()=>{
-          if (loggedState === "Admin") {return <AdminLogIn/>}
-          else if (loggedState === 'User') { return <LoggedIn/>}
-          else {return <Home/>}
-          }} />
+      <Route
+        exact
+        path="/"
+        component={() => {
+          if (loggedState === 'Admin') {
+            return <AdminLogIn />;
+          } else if (loggedState === 'User') {
+            return <LoggedIn />;
+          } else {
+            return <Home />;
+          }
+        }}
+      />
     </Router>
   );
 }
@@ -30,7 +37,7 @@ function Home() {
         <Login />
       </div>
       {/* <Map/> */}
-      <PieChartContainer />
+      {/* <PieChartContainer /> */}
     </div>
   );
 }
