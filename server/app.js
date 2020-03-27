@@ -7,7 +7,7 @@ const coroniController = require("./coroniController");
 const loginController = require("./loginController");
 const cors = require("cors")
 
-app.use(cors())
+app.use(cors());
 
 app.use(express.json());
 // app.use(express.urlencoded());
@@ -39,6 +39,7 @@ app.post('/coroni', coroniController.updateData, (req, res) => {
 app.post("/login", loginController.checkLogin, (req, res) => {
   res.status(200).json(res.locals.loginState);
 });
+
 app.get('/coroni', coroniController.getData, (req, res) => {
   res.status(200).json(res.locals.getData);
 });

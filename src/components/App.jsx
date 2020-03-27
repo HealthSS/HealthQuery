@@ -10,7 +10,7 @@ import PieChartContainer from './PieChartContainer.jsx';
 export default function App() {
   const loggedState = useSelector(state => state.text.isLoggedIn);
 
-  // const loggedState = null;
+  // const loggedState = user;
 
   return (
     <Router>

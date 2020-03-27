@@ -19,10 +19,10 @@ module.exports = {
             [
               '@babel/plugin-transform-runtime',
               {
-                regenerator: true
-              }
-            ]
-          ]
+                regenerator: true,
+              },
+            ],
+          ],
         },
       },
       {

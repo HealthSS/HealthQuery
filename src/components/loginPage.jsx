@@ -51,7 +51,7 @@ export default function Login(props) {
         <div id="oAuthButton">
             <hr/>
             {/* <button id="gButton" onClick={reRoute}> Google+ </button> */}
-            <a id="gButton" href="localhost:3000/auth/google">Google+</a>
+            <button id="gButton">Google+</button>
             <button id="fbButton"> Facebook </button>
         </div>
         </div>

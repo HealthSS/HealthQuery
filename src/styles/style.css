@@ -1,5 +1,5 @@
 body {
-  background: url(redCoroni.jpg) no-repeat center center fixed;
+  background: url(clinic.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -39,11 +39,11 @@ body {
 }
 
 #loginSection {
-  color: red;
+  color: white;
   /* border-style: solid; */
-  background: white;
-  height: 350px;
-  width: 300px;
+  background: rgb(8, 8, 8);
+  height: 300px;
+  width: 250px;
   margin: auto;
   box-shadow: 5px 5px 10px 2px grey;
 }
@@ -52,7 +52,12 @@ body {
   width: 70%;
   height: 30px;
   margin: 10px;
-  background: gainsboro;
+  background: black;
+  color: white;
+}
+#logButton:hover {
+  background: white;
+  color: black;
 }
 #signButton {
   width: 70%;
@@ -82,6 +87,7 @@ body {
   margin: 10px;
   background: rgb(66, 103, 178);
   color: white;
+  text-align: center;
 }
 
 #mapSection {
