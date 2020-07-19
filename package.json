@@ -34,7 +34,7 @@
     "google-auth-library": "^5.10.1",
     "googleapis": "^47.0.0",
     "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
     "pg": "^7.18.2",
