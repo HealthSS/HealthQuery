@@ -33,7 +33,7 @@
     "file-loader": "^5.1.0",
     "google-auth-library": "^5.10.1",
     "googleapis": "^47.0.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.15",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
